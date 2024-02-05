@@ -1,0 +1,48 @@
+1. Understanding Question 
+// given an nuts integer array 
+//  nums[1,2,3]
+// return sum of elements 
+
+
+
+2. Boundry condition
+// input must be an array 
+// array length [1,100]
+// value of element range [-10^6, 10^6]
+// input should be an array 
+
+
+
+3. Test Case
+// {0,0,0} ---> {0,0,0}
+// {-1,-1,-1,-1}  ---> {-1,-2,-3,-4}
+// {x,y,z,d}  --> {x,(x+y),(x+y+z),(x+y+z+d)}
+
+
+
+4. Pseudo Code
+
+// get the array 
+
+// for loop through nums
+  // assign nums[i] += num[i+1]
+
+// return the array  
+
+
+
+5. Implimentation Code
+
+public static int[] sumOfElements(int[] array){
+
+
+   for(int i = 0; i < array.length; i++){
+    
+     array[i] += array[i-1];
+
+   }
+
+   return array;
+
+
+}
